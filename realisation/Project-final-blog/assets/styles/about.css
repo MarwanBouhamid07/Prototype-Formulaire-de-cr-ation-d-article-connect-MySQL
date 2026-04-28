@@ -1,0 +1,285 @@
+
+:root {
+  /* =========================================
+     Primary Brand Colors (Royal Blue)
+  ========================================= */
+  --color-primary-50: #eff6ff;   /* Light blue backgrounds (hover states, tags) */
+  --color-primary-100: #dbeafe;  /* Blue icon backgrounds */
+  --color-primary-400: #60a5fa;  /* Light blue text accents */
+  --color-primary-600: #2563eb;  /* Main Brand Color (Buttons, Links, Active states) */
+  --color-primary-700: #1d4ed8;  /* Darker blue for button hover states */
+
+  /* =========================================
+     Neutral Colors (Slate)
+  ========================================= */
+  --color-bg-main: #f8fafc;      /* slate-50: Main app background */
+  --color-bg-surface: #ffffff;   /* white: Cards, Navbar, Sections */
+  
+  --color-slate-100: #f1f5f9;    /* Light borders, subtle backgrounds */
+  --color-slate-200: #e2e8f0;    /* Standard borders, divider lines */
+  --color-slate-300: #cbd5e1;    /* Placeholder text */
+  --color-slate-400: #94a3b8;    /* Muted icons, empty states */
+  --color-slate-500: #64748b;    /* Secondary text, subheadings */
+  --color-slate-600: #475569;    /* Body text on light backgrounds */
+  --color-slate-700: #334155;    /* Emphasized body text */
+  --color-slate-800: #1e293b;    /* Admin sidebar borders/hover */
+  --color-slate-900: #0f172a;    /* Headings, Admin sidebar background */
+  --color-slate-950: #020617;    /* Admin sidebar header background */
+
+  /* =========================================
+     Accent Colors (Used in Stats & Explore)
+  ========================================= */
+  --color-accent-purple: #9333ea;  /* purple-600: UI/UX topics, Unique Visitors */
+  --color-accent-amber: #d97706;   /* amber-600: Performance topics, Avg Time */
+  --color-accent-emerald: #059669; /* emerald-600: Trending topics, Positive stats */
+  --color-accent-red: #ef4444;     /* red-500: Negative stats, Delete actions */
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    text-decoration: none; 
+    list-style: none; 
+}
+body {
+    line-height: 1.6; 
+    overflow-x: hidden; 
+    scroll-behavior: smooth; 
+    min-height: 100vh; 
+    background-color: var(--color-bg-main);
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer{
+  margin-top: 100px;
+}
+
+main{
+    margin: auto;
+    margin-top: 100px;
+    /* width: 65%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/* Google Fonts for modern look */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+.about-card {
+    background-color: #ffffff;
+    border-radius: 24px; 
+    padding: 60px 40px;
+    /* max-width: 850px; */
+    width: 100%;
+    margin: 40px auto;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    box-shadow: 0 5px 40px rgba(63, 60, 60, 0.04);
+}
+.section-title {
+  color: var(--text-dark);
+  font-size: 28px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+}
+
+.value-card {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+}
+
+.icon-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* Colors for Icons */
+.blue-bg { background-color: #e0e7ff; color: #3b82f6; }
+.yellow-bg { background-color: #fef3c7; color: #f59e0b; }
+.pink-bg { background-color: #ffe4e6; color: #f43f5e; }
+.green-bg { background-color: #dcfce7; color: #10b981; }
+
+.value-card h3 {
+  color: var(--text-dark);
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+:root {
+  --primary-blue: #1d4ed8;
+  --bg-light: #f8fafc;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --white: #ffffff;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--bg-light);
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+
+/* Team Section Styling */
+.team-section {
+  background: var(--white);
+  padding: 60px 40px;
+  border-radius: 24px;
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: var(--text-main);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.member-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  background-color: var(--primary-blue);
+  color: white;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.member-card h3 {
+  font-size: 18px;
+  margin: 5px 0;
+  color: var(--text-main);
+}
+
+.role {
+  color: var(--primary-blue);
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.desc {
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.5;
+  padding: 0 10px;
+}
+
+/* Stats Banner Styling */
+.stats-banner {
+  background-color: var(--primary-blue);
+  border-radius: 24px;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  width: 100%;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .stats-banner {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+.value-card p {
+  color: var(--text-gray);
+  line-height: 1.6;
+  font-size: 15px;
+  margin: 0;
+}
+.icon-container {
+    background-color: #2563eb;
+    color: white;
+    width: 64px;
+    height: 64px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px;
+    font-size: 26px;
+}
+
+.about-title {
+    color: #0f172a; /* أسود داكن جداً */
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    letter-spacing: -1px;
+}
+
+.about-description p {
+    color: #64748b; /* رمادي مريح للعين للفقرات */
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}

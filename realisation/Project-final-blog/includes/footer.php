@@ -1,0 +1,1 @@
+<footer>&copy 2026 Project Insight Tech Blog. All rights reserved.</footer>

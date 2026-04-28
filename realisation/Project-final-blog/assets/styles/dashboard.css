@@ -1,0 +1,296 @@
+:root {
+  /* =========================================
+     Primary Brand Colors (Royal Blue)
+  ========================================= */
+  --color-primary-50: #eff6ff;   /* Light blue backgrounds (hover states, tags) */
+  --color-primary-100: #dbeafe;  /* Blue icon backgrounds */
+  --color-primary-400: #60a5fa;  /* Light blue text accents */
+  --color-primary-600: #2563eb;  /* Main Brand Color (Buttons, Links, Active states) */
+  --color-primary-700: #1d4ed8;  /* Darker blue for button hover states */
+
+  /* =========================================
+     Neutral Colors (Slate)
+  ========================================= */
+  --color-bg-main: #f8fafc;      /* slate-50: Main app background */
+  --color-bg-surface: #ffffff;   /* white: Cards, Navbar, Sections */
+  
+  --color-slate-100: #f1f5f9;    /* Light borders, subtle backgrounds */
+  --color-slate-200: #e2e8f0;    /* Standard borders, divider lines */
+  --color-slate-300: #cbd5e1;    /* Placeholder text */
+  --color-slate-400: #94a3b8;    /* Muted icons, empty states */
+  --color-slate-500: #64748b;    /* Secondary text, subheadings */
+  --color-slate-600: #475569;    /* Body text on light backgrounds */
+  --color-slate-700: #334155;    /* Emphasized body text */
+  --color-slate-800: #1e293b;    /* Admin sidebar borders/hover */
+  --color-slate-900: #0f172a;    /* Headings, Admin sidebar background */
+  --color-slate-950: #020617;    /* Admin sidebar header background */
+
+  /* =========================================
+     Accent Colors (Used in Stats & Explore)
+  ========================================= */
+  --color-accent-purple: #9333ea;  /* purple-600: UI/UX topics, Unique Visitors */
+  --color-accent-amber: #d97706;   /* amber-600: Performance topics, Avg Time */
+  --color-accent-emerald: #059669; /* emerald-600: Trending topics, Positive stats */
+  --color-accent-red: #ef4444;     /* red-500: Negative stats, Delete actions */
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    text-decoration: none; 
+    list-style: none; 
+}
+body {
+    line-height: 1.6; 
+    overflow-x: hidden; 
+    scroll-behavior: smooth; 
+    min-height: 100vh; 
+    background-color: var(--color-bg-main);
+}
+
+main{
+    margin-left: 260px;
+    padding: 50px;
+}
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.add-post{
+    color: var(--color-bg-main);
+    background-color: var(--color-primary-700);
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    height: 40px;
+    width: 100px;
+    cursor: pointer;
+    font-weight: 600;
+}
+header p{
+    color: var(--color-slate-400);
+
+}
+
+/* Container for all cards */
+.stats-container {
+    display: flex;
+    gap: 20px;
+    padding-top: 20px;
+    flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
+}
+.stat-card:hover{
+    border: 1px solid var(--color-primary-400);
+    transform: scale(1.04);
+}
+
+/* Individual Card Styling */
+.stat-card {
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 280px;
+    transition: 0.3s;
+    flex: 1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    border: 1px solid #f1f5f9;
+}
+
+/* Text Section */
+.stat-label {
+    color: #64748b;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.stat-value-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.stat-number {
+    font-size: 28px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+/* Trend Badge (Green) */
+.stat-trend {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.trend-up {
+    background-color: #f0fdf4;
+    color: #22c55e;
+}
+
+/* Icon Styling */
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+/* Specific Icon Colors */
+.icon-blue {
+    background-color: #eff6ff;
+    color: #3b82f6;
+}
+
+.icon-green {
+    background-color: #f0fdf4;
+    color: #22c55e;
+}
+
+.icon-purple {
+    background-color: #faf5ff;
+    color: #a855f7;
+}
+
+/* Container styling */
+.table-card {
+    background: white;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    border: 1px solid #f1f5f9;
+}
+
+/* Header Section (Title + Search) */
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.search-box {
+    position: relative;
+}
+
+.search-box input {
+    padding: 10px 15px 10px 40px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background: #f8fafc;
+    width: 250px;
+    outline: none;
+}
+
+.search-box i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+}
+
+/* Table Design */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    font-size: 12px;
+    color: #94a3b8;
+    padding: 15px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+td {
+    padding: 18px 15px;
+    font-size: 14px;
+    color: #475569;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.article-title {
+    color: #1d4ed8; /* Blue color for links */
+    font-weight: 600;
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status-published { background: #f0fdf4; color: #22c55e; }
+.status-draft { background: #fffbeb; color: #d97706; }
+.status-archived { background: #f1f5f9; color: #64748b; }
+
+/* Action Buttons */
+.actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #cbd5e1;
+    font-size: 16px;
+    transition: 0.3s;
+    margin-left: 8px;
+}
+
+.btn-edit:hover { color: #3b82f6; }
+.btn-delete:hover { color: #ef4444; }
+
+/* Footer Styling */
+.table-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.btn-nav {
+    padding: 8px 16px;
+    border: 1px solid #e2e8f0;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #475569;
+}
+.btn-nav:hover{
+    color: var(--color-primary-700);
+}
+tbody tr:hover .article-title{
+    color: var(--color-primary-700);
+}
+tbody tr:hover{
+    background-color: var(--color-slate-100);
+}
+.article-title{
+    color:var(--color-slate-900);
+}
+.cat-badge{
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: var(--color-slate-100);
+}

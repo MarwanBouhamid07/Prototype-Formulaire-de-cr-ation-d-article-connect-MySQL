@@ -1,0 +1,71 @@
+.welcome{
+        border-radius: 0 15px 15px 0;
+        background-image: url(../uploads/photo-1554629947-334ff61d85dc.avif);
+        flex-grow: 1;
+        background-size: cover;
+}
+.card-sigin{
+    height: fit-content;
+    margin:70px 0;
+}
+
+
+.selected-option {
+    display: flex;
+    justify-content: space-between;
+}
+i{
+    color: var(--color-slate-300);
+
+}
+.fa-shield-alt{
+    position: relative;
+    left: -7px;
+
+}
+
+.select-box {
+    border: 1px solid var(--color-slate-300); 
+    border-radius: 15px; 
+    padding: 10px 20px;
+    cursor: pointer;
+    position: relative;
+    background-color: var(--color-bg-main);
+    width: 100%;
+}
+
+.selected-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-slate-950);
+}
+
+
+.options-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    list-style: none;
+    padding: 0;
+    margin-top: 5px;
+    display: none; 
+    z-index: 100;
+}
+
+.options-list li {
+    padding: 12px 20px;
+}
+
+.options-list li:hover, .options-list li.active {
+    background-color: var(--color-primary-100); 
+    color: var( --color-slate-800);
+}
+
+.select-box.open .options-list {
+    display: block;
+}

@@ -1,0 +1,196 @@
+:root {
+  /* =========================================
+     Primary Brand Colors (Royal Blue)
+  ========================================= */
+  --color-primary-50: #eff6ff;   /* Light blue backgrounds (hover states, tags) */
+  --color-primary-100: #dbeafe;  /* Blue icon backgrounds */
+  --color-primary-400: #60a5fa;  /* Light blue text accents */
+  --color-primary-600: #2563eb;  /* Main Brand Color (Buttons, Links, Active states) */
+  --color-primary-700: #1d4ed8;  /* Darker blue for button hover states */
+
+  /* =========================================
+     Neutral Colors (Slate)
+  ========================================= */
+  --color-bg-main: #f8fafc;      /* slate-50: Main app background */
+  --color-bg-surface: #ffffff;   /* white: Cards, Navbar, Sections */
+  
+  --color-slate-100: #f1f5f9;    /* Light borders, subtle backgrounds */
+  --color-slate-200: #e2e8f0;    /* Standard borders, divider lines */
+  --color-slate-300: #cbd5e1;    /* Placeholder text */
+  --color-slate-400: #94a3b8;    /* Muted icons, empty states */
+  --color-slate-500: #64748b;    /* Secondary text, subheadings */
+  --color-slate-600: #475569;    /* Body text on light backgrounds */
+  --color-slate-700: #334155;    /* Emphasized body text */
+  --color-slate-800: #1e293b;    /* Admin sidebar borders/hover */
+  --color-slate-900: #0f172a;    /* Headings, Admin sidebar background */
+  --color-slate-950: #020617;    /* Admin sidebar header background */
+
+  /* =========================================
+     Accent Colors (Used in Stats & Explore)
+  ========================================= */
+  --color-accent-purple: #9333ea;  /* purple-600: UI/UX topics, Unique Visitors */
+  --color-accent-amber: #d97706;   /* amber-600: Performance topics, Avg Time */
+  --color-accent-emerald: #059669; /* emerald-600: Trending topics, Positive stats */
+  --color-accent-red: #ef4444;     /* red-500: Negative stats, Delete actions */
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    text-decoration: none; 
+    list-style: none; 
+}
+body {
+    line-height: 1.6; 
+    overflow-x: hidden; 
+    scroll-behavior: smooth; 
+    min-height: 100vh; 
+}
+
+header{
+    padding: 10px 30px;
+    background-color: var(--color-bg-surface);
+    background-color: rgba(255, 255, 255, 0.7);
+    border-bottom: 1px solid var(--color-slate-200);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    backdrop-filter:blur(10px) ;
+    -webkit-backdrop-filter: blur(50px);
+}
+.group-style{
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 68%;
+}
+.group-LNM-L{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+
+}
+.logo-project-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.logo-project-name .logo{
+    padding: 7px;
+    color: white;
+    border-radius: 5px;
+    font-weight: 700;
+    background-color: var(--color-primary-600);
+    margin-right: 10px;
+    font-size: 17px;
+}
+.logo-project-name .project-name{
+    font-weight: 700;
+    font-size: 19px;
+}
+nav{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+header nav a{
+    color: var(--color-slate-500);
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+
+}
+header nav a:hover{
+    color: var(--color-primary-600);
+}
+.buttons-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:13px ;
+    font-weight: 600;
+    
+}
+.buttons-header a{
+    margin-right: 10px;
+    color: var(--color-slate-500);
+}
+.buttons-header a:hover{
+    color: var(--color-primary-700);
+}
+
+.buttons-header .admin-button{
+    color: var(--color-slate-500);
+    margin-right: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.buttons-header .admin-button:hover{
+    color: var(--color-primary-600);
+}
+.explore{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: var(--color-bg-main);
+    transition: 0.3s;
+    background-color: var(--color-primary-700);
+
+}
+.explore:hover{
+    transform: translateY(-3px);
+    background-color: var(--color-primary-700);
+}
+.profile-head{
+    border-right: 1px solid var(--color-slate-300);
+    padding-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+.profile-head .profile-user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+width: 35px;
+margin-right: 5px;
+height: 35px;
+border-radius: 50%;
+background-color: var(--color-slate-100);
+color: var(--color-slate-400);
+border: 1px solid var(--color-slate-200);
+
+}
+.role{
+    color: var(--color-primary-600);
+    text-transform:uppercase ;
+}
+.username{
+    text-transform: capitalize;
+}
+@media (max-width:1900px) {
+    main{
+        width: 90%;
+    }
+    .group-style{
+        width: 90%;
+    }
+}
